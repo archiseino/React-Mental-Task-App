@@ -140,20 +140,7 @@ const ChainedMathApp = () => {
 
   const getFullSequence = () => {
     return sequence
-      .map((step, index) => {
-        if (step.isFirst) {
-          return step.number.toString();
-        } else {
-          return ` ${step.operation} ${step.number}`;
-        }
-      })
-      .join('');
-  };
-
-  const getSequenceDisplay = () => {
-    return sequence
-      .slice(0, currentStep)
-      .map((step, index) => {
+      .map((step) => {
         if (step.isFirst) {
           return step.number.toString();
         } else {
